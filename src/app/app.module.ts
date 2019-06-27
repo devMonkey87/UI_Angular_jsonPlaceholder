@@ -12,6 +12,11 @@ import {DropdownModule} from 'primeng/dropdown';
 import {ButtonModule} from 'primeng/button';
 import { TablesDataComponent } from './components/tables-data/tables-data.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import {TableModule} from 'primeng/table';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 
 
 
@@ -32,7 +37,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     BrowserModule,
     FileUploadModule,
     DropdownModule,
-    ButtonModule
+    ButtonModule,
+    TableModule,
+    HttpClientModule
 
   ],
   providers: [],

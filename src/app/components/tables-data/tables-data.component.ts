@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { getTestBed } from '@angular/core/testing';
+import { Post } from './../../../dto/post';
+import { JsonApiService } from './../../services/json-api.service';
+import { Component, OnInit, QueryList } from '@angular/core';
 
 @Component({
   selector: 'app-tables-data',
@@ -7,9 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablesDataComponent implements OnInit {
 
-  constructor() { }
+  constructor(public jsonService : JsonApiService) { }
+
+
+
+  posts: Post[];
+
 
   ngOnInit() {
+
+
+    this.jsonService.get_products().subscribe(posts => {
+
+      this.posts = posts
+      console.log(posts);
+
+    }
+  
+      );
+
   }
+
+
+
+
 
 }
