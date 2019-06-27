@@ -10,6 +10,8 @@ import {FileUploadModule} from 'primeng/fileupload';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import {DropdownModule} from 'primeng/dropdown';
 import {ButtonModule} from 'primeng/button';
+import { TablesDataComponent } from './components/tables-data/tables-data.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 
@@ -19,7 +21,9 @@ import {ButtonModule} from 'primeng/button';
 @NgModule({
   declarations: [
     AppComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    TablesDataComponent,
+    PageNotFoundComponent
   ],
   imports: [
     AppRoutingModule,
