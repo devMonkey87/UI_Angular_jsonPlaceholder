@@ -14,6 +14,8 @@ import { TablesDataComponent } from './components/tables-data/tables-data.compon
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {TableModule} from 'primeng/table';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpErrorHandler } from './http-error-handler.service';
+import { MessageService } from './message.service';
 
 
 
@@ -42,7 +44,12 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [
+    HttpErrorHandler,
+    MessageService,
+
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

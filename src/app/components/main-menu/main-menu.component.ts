@@ -13,7 +13,7 @@ export class MainMenuComponent implements OnInit {
     ngOnInit() {
         this.items = [
             {
-                label: 'Data', icon: 'fa fa-fw fa-check',
+                label: 'Data', icon: 'pi pi-table',
                 items: [
                     [
                         {
@@ -30,7 +30,7 @@ export class MainMenuComponent implements OnInit {
                 ]
             },
             {
-                label: 'User', icon: 'fa fa-fw fa-soccer-ball-o',
+                label: 'User', icon: 'pi pi-user',
                 items: [
                     [
                         {
@@ -42,27 +42,8 @@ export class MainMenuComponent implements OnInit {
                             items: [{ label: 'Sports 2.1' }, { label: 'Sports 2.2' }]
                         },
 
-                    ],
-                    [
-                        {
-                            label: 'Sports 3',
-                            items: [{ label: 'Sports 3.1' }, { label: 'Sports 3.2' }]
-                        },
-                        {
-                            label: 'Sports 4',
-                            items: [{ label: 'Sports 4.1' }, { label: 'Sports 4.2' }]
-                        }
-                    ],
-                    [
-                        {
-                            label: 'Sports 5',
-                            items: [{ label: 'Sports 5.1' }, { label: 'Sports 5.2' }]
-                        },
-                        {
-                            label: 'Sports 6',
-                            items: [{ label: 'Sports 6.1' }, { label: 'Sports 6.2' }]
-                        }
-                    ]
+                    ]   
+                    
                 ]
             }
         ];
