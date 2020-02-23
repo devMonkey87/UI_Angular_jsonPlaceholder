@@ -8,6 +8,8 @@ import { MenuItem } from 'primeng/components/common/menuitem';
 })
 export class MainMenuComponent implements OnInit {
 
+     textButton = "puta rata ";
+
     items: MenuItem[];
 
     ngOnInit() {

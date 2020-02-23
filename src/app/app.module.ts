@@ -1,12 +1,11 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MegaMenuModule} from 'primeng/megamenu';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FileUploadModule} from 'primeng/fileupload';
-
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import {DropdownModule} from 'primeng/dropdown';
 import {ButtonModule} from 'primeng/button';
@@ -16,6 +15,7 @@ import {TableModule} from 'primeng/table';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpErrorHandler } from './http-error-handler.service';
 import { MessageService } from './message.service';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 
@@ -30,7 +30,8 @@ import { MessageService } from './message.service';
     AppComponent,
     MainMenuComponent,
     TablesDataComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProductDetailsComponent
   ],
   imports: [
     AppRoutingModule,
@@ -41,8 +42,11 @@ import { MessageService } from './message.service';
     DropdownModule,
     ButtonModule,
     TableModule,
-    HttpClientModule
-
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: '', component: ProductDetailsComponent },
+      { path: 'products/:productId', component: ProductDetailsComponent },
+    ])
   ],
   providers: [
     HttpErrorHandler,
