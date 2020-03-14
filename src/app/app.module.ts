@@ -16,6 +16,7 @@ import {TableModule} from 'primeng/table';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpErrorHandler } from './http-error-handler.service';
 import { MessageService } from './message.service';
+import { ColorCreatorComponent } from './color-creator/color-creator.component';
 
 
 
@@ -30,7 +31,8 @@ import { MessageService } from './message.service';
     AppComponent,
     MainMenuComponent,
     TablesDataComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ColorCreatorComponent
   ],
   imports: [
     AppRoutingModule,
